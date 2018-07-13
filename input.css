@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+*::before,*::after{
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+ul{
+    border: 1px solid #b8b8b8;
+    width: 540px;
+}
+li{
+    padding-left: 8px;
+    text-align: left;
+}
+li:hover{
+    background-color: #f0f0f0;
+}
+.suggestion{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+.suggestion.active{
+    display: block;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bothWrapper{
+    text-align: center;
+    margin-top: -150px;
+}
+.wrapper{
+    display: flex;
+    position: relative;
+}
+.inputWrapper{
+    position: relative;
+    float: left;
+    display: inline-block;   // inline 元素有时很多bug，改成inlin-block；一旦出现问题试着改一下 display
+}
+.inputWrapper  input[type=text]{
+    border: 1px solid #b8b8b8;
+    width: 540px;
+    height: 40px;
+    line-height: 40px;       /* 确保字体居中 */
+    font-size: 15px;         /* 光标大小不严格等于font-size,还要细调 */
+    padding-left: 8px;       // 光标位置右移
+}
+.inputWrapper  input[type=text]:focus{
+    border-color: #4b94fc;
+    outline: none;           // 去掉点击时边框出现的蓝色
+}
+.inputWrapper  svg.icon{
+    width: 20px;
+    height: 20px;
+    fill: #b8b8b8;
+}
+.inputWrapper  svg.icon:hover{
+    fill: #4b94fc;
+    cursor: pointer;    // 变成一个小手
+}
+.wrapper  button{
+    float: left;
+}
+.floatSpan{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:100%;    /* 与父元素同高，再加上flex，目的是使里面的内容居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: #b8b8b8;
+}
+.floatSpan  .splitLine{
+    width: 0;
+    height: 16px;
+    border-right: 1px solid;
+    margin: 0 10px;
+}
+.wrapper button{
+    background-color: #3988fb;
+    border: none;
+    font-size: 14px;
+    color: white;
+    padding: 0 20px;
+}
+.wrapper button:focus{
+    outline: none;
+}
+.wrapper button:hover{
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+    background-color: #3781f0;
+}

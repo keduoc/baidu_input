@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input</title>
+    <link rel="stylesheet" href="./input.css">
+    <script src="//at.alicdn.com/t/font_746087_775l2y6lwh7.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="bothWrapper">
+    <div class="img">
+        <img src="./bd_logo1.png" alt="百度logo" width="270" height="129">
+    </div>
+    <div class="wrapper">
+        <span class="inputWrapper">
+            <input id="keyWord" type="text" autocomplete="off">     <!-- autocomplete="off" 关闭自动补全的记忆功能-->
+            <span class="floatSpan">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-MIC"></use>
+                </svg>
+                <span class="splitLine"></span>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-camera"></use>
+                </svg>
+            </span>
+        </span>
+        <button>百度一下</button>
+        <ul id="suggestion" class="suggestion">
+            <li>选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+            <li>选项4</li>
+            <li>选项5</li>
+        </ul>
+    </div>
+</div>
+<script src="input.js"></script>
+</body>
+</html>
